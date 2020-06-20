@@ -14,7 +14,7 @@ Models are trained using a sci-kit learn dataset containing ~18000 newsgroup pos
 1. Create a working directory for the project with the name of your choice and clone GitHub repository https://github.com/trdeca23/nlp/post_classifier to it. Next steps should be done from within this working directory.
 
 
-2. Install required packages listed in requirements.txt. To make predictions using pre-built CLASSIFIER model, skip to step 6.
+2. Install required packages listed in requirements.txt. To make predictions using a pre-built CLASSIFIER model (previously built by doing Steps 3-5), skip to step 6. To build a new model, continue to Step 3.
 
 
 3. Download the pre-trained word embeddings: glove.twitter.27B.100d.txt, from https://www.kaggle.com/icw123/glove-twitter or https://nlp.stanford.edu/projects/glove/. Make sure that the correct location is specified by the `embeddings_loc` variable at the top of `source/variables.py`.
