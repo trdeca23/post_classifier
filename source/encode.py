@@ -6,6 +6,7 @@ import pandas as pd
 import pickle
 from numpy import load,savetxt
 from tensorflow.keras.models import load_model, Model
+from pathlib import Path
 
 
 #local
@@ -15,6 +16,7 @@ observation = pd.read_csv(sys.argv[1], header=None, sep="\n", names=["text"])
 reconstructed_model = load_model(sys.argv[2]) #load model
 
 os.chdir('source')
+Path("../output").mkdir(parents=True, exist_ok=True) #prepare directory for output if it doesn't already exist
 
 handle = open(pipeline_loc, "rb")
 pipeline = pickle.load(handle)
