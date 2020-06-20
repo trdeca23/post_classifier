@@ -1,0 +1,6 @@
+sklearn
+pandas
+keras
+tensorflow
+bs4
+nltk

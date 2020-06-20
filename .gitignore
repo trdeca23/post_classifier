@@ -1,0 +1,8 @@
+output/
+#deprecated/
+#*.txt
+#*.csv
+*.gz
+#*.png
+#*.sav
+__pycache__/

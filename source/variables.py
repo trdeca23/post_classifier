@@ -1,0 +1,10 @@
+model_loc = "generated/my_model" #change this to specify new model without overwriting an older one
+model_type = "classifier" #either "classifier" or "autoencoder"
+embeddings_loc = "/Users/decandia/Documents/data/kaggle/glove-twitter/glove.twitter.27B.100d.txt"
+max_features = 10000 #number of unique words included (e.g., specifying 1000 includes 1000 most common words) after cleaning procedures 
+max_text_len = 10#0 #number of words of text that are included
+tokenizer_loc = "generated/tokenizer.pickle"
+batch_size = 256 #model paramater
+epochs = 1 #model parameter; set at 1 just for testing
+label_encoder_loc = "generated/label_encoder.pickle"
+pipeline_loc = "generated/pipeline.pickle"
