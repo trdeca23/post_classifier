@@ -14,7 +14,7 @@ Models are trained using a sci-kit learn dataset containing ~18000 newsgroup pos
 1. Create a working directory for the project with the name of your choice and clone GitHub repository https://github.com/trdeca23/nlp/post_classifier to it. Next steps should be done from within this working directory.
 
 
-2. Install required packages listed in requirements.txt. To make predictions using a pre-built CLASSIFIER model (previously built by doing Steps 3-5), skip to step 6. To build a new model, continue to Step 3.
+2. Install required packages listed in requirements.txt. To make predictions using a pre-built CLASSIFIER model (previously built by doing Steps 3-5; accuracy > 80%), skip to step 6. To build a new model, continue to Step 3.
 
 
 3. Download the pre-trained word embeddings: glove.twitter.27B.100d.txt, from https://www.kaggle.com/icw123/glove-twitter or https://nlp.stanford.edu/projects/glove/. Make sure that the correct location is specified by the `embeddings_loc` variable at the top of `source/variables.py`.
@@ -46,7 +46,7 @@ Models are trained using a sci-kit learn dataset containing ~18000 newsgroup pos
 
 # NOTES: 
 
-- Running `python source/main.py` took about 20 minutes to run, with `epochs` set to 20, on my 2014 Macbook: Memory - 8 GB 1600 MHz DDR3, Processor - 2.6 GHz Intel Core i5. Bulk of the time spent in training; to reduce training time (e.g., for testing), reduce `epochs` parameter in train.py.
+- Running `python source/main.py` took about 10 minutes to run, with `epochs` set to 10, on my 2014 Macbook: Memory - 8 GB 1600 MHz DDR3, Processor - 2.6 GHz Intel Core i5. Bulk of the time spent in training; to reduce training time (e.g., for testing), reduce `epochs` parameter in train.py.
 
 - Options: Changes can be made by editing `source/variables.py`. For example, you can change the number of epochs that the model is trained (`epochs`), the size of the text that will be processed (`max_features`; `max_text_len`). To creat multiple models, change `model_loc` to specify different model names (e.g., if you are building both a classifier and an autoencoder). On the other hand, if you would like to build models fitted using different data, with potentially different categories, you will also need to tweak `source/load_data.py`. Note that other scripts will not need to be edited as long as this script outputs a pandas dataframe containing exactly two columns, with the text column labeled 'text', and the category column labeled 'subject'.
 
