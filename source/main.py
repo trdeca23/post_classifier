@@ -18,6 +18,9 @@ import pickle
 from pathlib import Path
 
 
+os.chdir('source')
+
+
 #local
 from variables import model_loc, model_type, pipeline_loc
 from load_data import load_data
@@ -28,7 +31,6 @@ from train import trained_model
 from new_data_pipeline import new_data_pipeline
 
 
-os.chdir('source')
 Path("../output").mkdir(parents=True, exist_ok=True) #prepare directory for output
 Path("generated").mkdir(parents=True, exist_ok=True) #prepare directory for saving binary objects, e.g., model
 
